@@ -5,6 +5,7 @@
 @section('content_header')
     @include('flash::message')
 <a class="btn btn-primary" href="{{ route('contatos.create') }}">Novo Contato</a>
+<a class="btn btn-success" href="{{ route('relatorio.contatos') }}">Relatório</a>
 @stop
 
 @section('content')

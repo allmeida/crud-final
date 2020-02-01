@@ -107,4 +107,11 @@ class ContatoController extends Controller
 
         flash('Contato excluido com sucesso')->success();
     }
+
+    public function relatorio() {
+        $contatos = Contato::all();
+        return \PDF::loadView('contato.pdf', compact('contatos'))->stream();
+        //return view('contato.pdf');
+        //return \PDF::loadView('contato.pdf')->download('relatório_contatos.pdf');
+    }
 }

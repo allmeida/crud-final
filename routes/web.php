@@ -24,3 +24,5 @@ Route::resource('/contatos', 'ContatoController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('contato/relatorio', 'ContatoController@relatorio')->name('relatorio.contatos');
